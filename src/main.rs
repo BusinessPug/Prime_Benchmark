@@ -6,8 +6,6 @@ use std::sync::atomic::{AtomicBool, Ordering};
 use std::sync::Arc;
 
 // This value affects the granularity of progress updates and parallelism.
-// Smaller chunks can slow down the computation due to overhead, but will increase progress bar accuracy in theory
-// but the progress bar is broken at the moment so it doesn't matter
 const CHUNK_SIZE: usize = 10_000;
 
 pub fn sieve(limit: usize) -> Vec<usize> {
